@@ -1,141 +1,89 @@
 'use client';
 
-import { Mail, Phone, Github, Linkedin } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Mail, Phone, Github, Linkedin, Send } from 'lucide-react';
+import SectionReveal from '@/components/ui/section-reveal';
+
+const contactLinks = [
+  { icon: Mail, label: 'Email', value: 'sameryousry99@gmail.com', href: 'mailto:sameryousry99@gmail.com' },
+  { icon: Phone, label: 'WhatsApp', value: '+20 101 730 6593', href: 'https://wa.me/201017306593' },
+  { icon: Github, label: 'GitHub', value: 'github.com/samer12332', href: 'https://github.com/samer12332' },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/samer-yousry-88921a228',
+    href: 'https://www.linkedin.com/in/samer-yousry-88921a228/',
+  },
+];
 
 export default function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
   };
 
   return (
-    <section className="py-20 px-6 bg-background">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-foreground mb-12 text-center">Get In Touch</h2>
+    <section className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        <SectionReveal className="text-center">
+          <p className="text-cyan-300 uppercase tracking-[0.16em] text-xs mb-3">Get In Touch</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Let&apos;s Build Something Great</h2>
+          <p className="text-slate-300 mt-4 max-w-2xl mx-auto">
+            Open to full-time opportunities, freelance projects, and technical collaborations.
+          </p>
+        </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-8">Contact Information</h3>
-              <div className="space-y-6">
-                <a
-                  href="mailto:sameryousry99@gmail.com"
-                  className="flex items-start gap-4 group"
-                >
-                  <Mail className="text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" size={24} />
-                  <div>
-                    <p className="text-foreground/60 text-sm">Email</p>
-                    <p className="text-foreground font-semibold hover:text-accent transition-colors">
-                      sameryousry99@gmail.com
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="tel:+201017306593"
-                  className="flex items-start gap-4 group"
-                >
-                  <Phone className="text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" size={24} />
-                  <div>
-                    <p className="text-foreground/60 text-sm">Phone</p>
-                    <p className="text-foreground font-semibold hover:text-accent transition-colors">
-                      +20 101 730 6593
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://github.com/samer12332"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 group"
-                >
-                  <Github className="text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" size={24} />
-                  <div>
-                    <p className="text-foreground/60 text-sm">GitHub</p>
-                    <p className="text-foreground font-semibold hover:text-accent transition-colors">
-                      github.com/samer12332
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/samer-yousry-88921a228/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 group"
-                >
-                  <Linkedin className="text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" size={24} />
-                  <div>
-                    <p className="text-foreground/60 text-sm">LinkedIn</p>
-                    <p className="text-foreground font-semibold hover:text-accent transition-colors">
-                      linkedin.com/in/samer-yousry-88921a228
-                    </p>
-                  </div>
-                </a>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="rounded-2xl border border-white/10 bg-slate-900/60 p-6"
+          >
+            <h3 className="text-2xl font-semibold text-white mb-6">Contact Details</h3>
+            <div className="space-y-4">
+              {contactLinks.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target={item.href.startsWith('http') ? '_blank' : undefined}
+                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="flex items-start gap-4 p-3 rounded-xl border border-white/10 bg-white/[0.02] hover:border-cyan-300/45 transition-colors"
+                  >
+                    <span className="w-10 h-10 rounded-lg bg-cyan-300/15 text-cyan-200 flex items-center justify-center shrink-0">
+                      <Icon size={18} />
+                    </span>
+                    <span>
+                      <span className="block text-sm text-slate-400">{item.label}</span>
+                      <span className="block text-slate-100 font-medium">{item.value}</span>
+                    </span>
+                  </a>
+                );
+              })}
             </div>
-          </div>
+          </motion.div>
 
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="rounded-2xl border border-white/10 bg-slate-900/60 p-6"
+          >
+            <h3 className="text-2xl font-semibold text-white mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground placeholder-foreground/40 focus:outline-none focus:border-accent transition-colors"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground placeholder-foreground/40 focus:outline-none focus:border-accent transition-colors"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground placeholder-foreground/40 focus:outline-none focus:border-accent transition-colors"
-                  placeholder="Subject"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground placeholder-foreground/40 focus:outline-none focus:border-accent transition-colors resize-none"
-                  placeholder="Your message..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"
-              >
+              <input className="w-full px-4 py-3 rounded-xl bg-slate-950/70 border border-white/10 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-cyan-300/50" type="text" placeholder="Your name" />
+              <input className="w-full px-4 py-3 rounded-xl bg-slate-950/70 border border-white/10 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-cyan-300/50" type="email" placeholder="Your email" />
+              <input className="w-full px-4 py-3 rounded-xl bg-slate-950/70 border border-white/10 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-cyan-300/50" type="text" placeholder="Subject" />
+              <textarea className="w-full px-4 py-3 rounded-xl bg-slate-950/70 border border-white/10 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-cyan-300/50 resize-none" rows={5} placeholder="Message" />
+              <button className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-300 to-blue-400 text-slate-950 font-semibold hover:brightness-105 transition-all" type="submit">
+                <Send size={16} />
                 Send Message
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
@@ -11,21 +11,21 @@ import Contact from '@/components/Contact';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
+const sections = ['home', 'about', 'projects', 'skills', 'experience', 'education', 'contact'];
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'skills', 'experience', 'education', 'contact'];
-      
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            setActiveSection(sectionId);
-            break;
-          }
+        if (!element) continue;
+
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 180 && rect.bottom >= 220) {
+          setActiveSection(sectionId);
+          break;
         }
       }
     };
@@ -36,13 +36,15 @@ export default function Home() {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
     <>
       <Navigation activeSection={activeSection} onNavigate={scrollToSection} />
-      <main>
+      <main className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(34,211,238,0.08),transparent_40%)]" />
+
         <section id="home" className="scroll-mt-24">
           <Hero onContactClick={() => scrollToSection('contact')} onProjectsClick={() => scrollToSection('projects')} />
         </section>

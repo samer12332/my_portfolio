@@ -1,55 +1,70 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import SectionReveal from '@/components/ui/section-reveal';
+
+const skillCategories = [
+  {
+    title: 'Programming Languages',
+    skills: ['JavaScript', 'TypeScript', 'Python', 'C', 'C++', 'Java', 'PHP'],
+  },
+  {
+    title: 'Frontend & UI',
+    skills: ['React.js', 'Next.js', 'Tailwind CSS', 'Vue.js', 'HTML', 'CSS'],
+  },
+  {
+    title: 'Backend & APIs',
+    skills: ['Node.js', 'Express.js', 'Django', 'Laravel', 'REST APIs', 'GraphQL'],
+  },
+  {
+    title: 'Data & Infrastructure',
+    skills: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Docker', 'Prisma'],
+  },
+  {
+    title: 'Engineering Practices',
+    skills: ['System Design', 'Clean Architecture', 'Authentication', 'RBAC', 'Testing', 'Git/GitHub'],
+  },
+  {
+    title: 'Collaboration',
+    skills: ['Agile Workflow', 'Problem Solving', 'Technical Mentoring', 'Documentation'],
+  },
+];
+
 export default function Skills() {
-  const skillCategories = [
-    {
-      title: 'Programming Languages',
-      skills: ['JavaScript', 'TypeScript', 'Python', 'C', 'C++', 'Java', 'PHP'],
-    },
-    {
-      title: 'Web Development',
-      skills: ['HTML', 'CSS', 'React.js', 'Node.js', 'Express.js', 'Next.js'],
-    },
-    {
-      title: 'Frameworks & Technologies',
-      skills: ['Laravel', 'Vue.js', 'Django', 'Tailwind CSS'],
-    },
-    {
-      title: 'Backend & APIs',
-      skills: ['REST APIs', 'GraphQL', 'Authentication', 'RBAC', 'Microservices'],
-    },
-    {
-      title: 'Databases',
-      skills: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis'],
-    },
-    {
-      title: 'Tools & Libraries',
-      skills: ['Git', 'GitHub', 'Postman', 'Swagger', 'Prisma', 'Docker'],
-    },
-    {
-      title: 'Concepts',
-      skills: ['Scalable Systems', 'Clean Architecture', 'Problem Solving', 'System Design'],
-    },
-  ];
-
   return (
-    <section className="py-20 px-6 bg-card/50">
+    <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-foreground mb-12">Skills</h2>
+        <SectionReveal>
+          <p className="text-cyan-300 uppercase tracking-[0.16em] text-xs mb-3">Core Expertise</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Skills & Technologies</h2>
+          <p className="text-slate-300 max-w-3xl">
+            A practical toolkit across product engineering, backend architecture, and frontend implementation.
+          </p>
+        </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category) => (
-            <div key={category.title} className="space-y-4">
-              <h3 className="text-xl font-bold text-accent">{category.title}</h3>
-              <div className="flex flex-wrap gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          {skillCategories.map((category, index) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.06 }}
+              whileHover={{ y: -5 }}
+              className="rounded-2xl border border-white/10 bg-slate-900/65 p-6"
+            >
+              <h3 className="text-lg font-semibold text-cyan-200 mb-4">{category.title}</h3>
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-background rounded-lg text-foreground/80 text-sm border border-border hover:border-accent/50 transition-colors"
+                    className="px-3 py-1.5 rounded-full text-xs font-medium bg-white/[0.04] border border-white/10 text-slate-200"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

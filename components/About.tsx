@@ -1,34 +1,49 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { BriefcaseBusiness, Code2, Layers3, Rocket } from 'lucide-react';
+import SectionReveal from '@/components/ui/section-reveal';
+
+const highlights = [
+  { icon: Code2, title: 'Engineering Depth', text: 'Full-stack and backend expertise with practical production-focused delivery.' },
+  { icon: Layers3, title: 'System Thinking', text: 'Clean architecture, scalable design, and maintainable codebases.' },
+  { icon: BriefcaseBusiness, title: 'Real Projects', text: 'Hands-on work across e-commerce, dashboards, and API-driven systems.' },
+  { icon: Rocket, title: 'Continuous Growth', text: 'Advanced upskilling through ITI Open Source Development Diploma.' },
+];
+
 export default function About() {
   return (
-    <section className="py-20 px-6 bg-card/50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-foreground mb-12">About</h2>
-
-        <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
-          <p>
-            I&apos;m a Software Engineer with a strong foundation in building real-world software projects, 
-            scalable web applications, and reliable systems. My journey has been driven by a passion for 
-            clean architecture, problem-solving, and delivering robust solutions.
+    <section className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        <SectionReveal>
+          <p className="text-cyan-300 uppercase tracking-[0.16em] text-xs mb-3">About Me</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Engineering with Product Mindset</h2>
+          <p className="text-slate-300 leading-relaxed max-w-4xl text-lg">
+            I&apos;m a Software Engineer focused on building robust, user-centered products. I enjoy crafting reliable backend systems and polished frontends that work together seamlessly. My goal is always to deliver software that is scalable, maintainable, and genuinely useful.
           </p>
+        </SectionReveal>
 
-          <p>
-            With expertise across full-stack development, backend systems, and RESTful APIs, I focus on 
-            creating solutions that not only work well but are also maintainable and scalable. I&apos;ve had 
-            the opportunity to work on diverse projects ranging from e-commerce platforms to educational 
-            dashboards.
-          </p>
-
-          <p>
-            Currently, I&apos;m enrolled in an intensive <span className="text-accent font-semibold">9-month 
-            ITI Open Source Development Diploma</span> (started October 2025), where I&apos;m deepening my 
-            knowledge of full-stack technologies and open-source practices.
-          </p>
-
-          <p>
-            Beyond coding, I&apos;m passionate about sharing knowledge. I work as a part-time programming 
-            instructor, helping students aged 8-18 learn programming fundamentals and build real projects 
-            using multiple technologies.
-          </p>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {highlights.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 26 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ y: -5 }}
+                className="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/75 to-slate-900/45 p-6"
+              >
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-cyan-300/15 text-cyan-200 mb-4">
+                  <Icon size={20} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-slate-300">{item.text}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
