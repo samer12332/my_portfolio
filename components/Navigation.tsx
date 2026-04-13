@@ -49,15 +49,15 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
         <button
           onClick={() => handleNavClick('home')}
-          className="rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+          className="rounded-md overflow-visible focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
           aria-label="Go to Home section"
         >
           <Image
             src="/samer-logo.png"
             alt="Samer Yousry logo"
-            width={160}
-            height={90}
-            className="h-10 sm:h-11 w-auto"
+            width={280}
+            height={158}
+            className="h-10 sm:h-11 w-auto origin-left scale-[2.2] sm:scale-[2.5] drop-shadow-[0_14px_36px_rgba(34,211,238,0.55)]"
             priority
           />
         </button>
