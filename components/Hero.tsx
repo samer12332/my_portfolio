@@ -94,7 +94,7 @@ export default function Hero({ onProjectsClick, onContactClick }: HeroProps) {
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-cyan-300/30 via-blue-500/20 to-sky-300/20 blur-2xl" />
           <div className="relative rounded-[2rem] border border-cyan-300/35 bg-slate-900/60 p-3 backdrop-blur-sm shadow-[0_25px_70px_-35px_rgba(34,197,255,0.9)]">
             <Image
-              src="/samer-profile.jpg"
+              src="/samer-profile.jpeg"
               alt="Samer Yousry"
               width={520}
               height={520}
