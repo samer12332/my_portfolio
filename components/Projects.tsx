@@ -113,6 +113,7 @@ const projects: Project[] = [
       'UI/UX Optimization',
     ],
     github: 'https://github.com/samer12332/ITI-JS-Project',
+    liveDemo: 'https://effulgent-tulumba-57a4fe.netlify.app/',
   },
   {
     id: '7',
