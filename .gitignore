@@ -15,3 +15,19 @@ node_modules
 .next/
 .DS_Store
 .vercel
+
+# Local run artifacts
+*.log
+*.err
+*.out
+
+# Local automation/browser caches
+.playwright-browsers/
+screenshots/
+public/screenshots/
+
+# Temporary/duplicate local image artifacts
+public/aws_certificate_image.png
+public/Information_security_saylor_image.jpg
+public/certifications/information-security.png
+public/portfolio-home.png

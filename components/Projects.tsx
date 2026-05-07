@@ -19,6 +19,30 @@ interface Project {
 
 const projects: Project[] = [
     {
+        id: "10",
+        title: "Clinic Appointment System",
+        description:
+            "Full-stack, role-based healthcare platform that streamlines clinic operations from appointment booking to consultation follow-up.",
+        category: "Full-Stack",
+        image: "/covers/clinic_appointment_system.png",
+        technologies: [
+            "Django",
+            "Django REST Framework",
+            "Vue 3 (Composition API)",
+            "Vite",
+            "Pinia",
+            "Tailwind CSS",
+            "MySQL",
+            "JWT Authentication",
+            "Role-Based Access Control (RBAC)",
+            "Appointment Lifecycle Management",
+            "Doctor Availability Scheduling",
+            "Consultation Records & Prescriptions",
+            "Dashboard Analytics",
+        ],
+        github: "https://github.com/samer12332/Clinic-Appointment-system-Django",
+    },
+    {
         id: "1",
         title: "Hotel System Laravel",
         description:
