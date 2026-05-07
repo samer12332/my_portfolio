@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
+import CertificationsSection from '@/components/sections/certifications-section';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
@@ -11,7 +12,7 @@ import Contact from '@/components/Contact';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
-const sections = ['home', 'about', 'projects', 'skills', 'experience', 'education', 'contact'];
+const sections = ['home', 'about', 'projects', 'certifications', 'experience', 'skills', 'education', 'contact'];
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
@@ -54,11 +55,14 @@ export default function Home() {
         <section id="projects" className="scroll-mt-24">
           <Projects />
         </section>
-        <section id="skills" className="scroll-mt-24">
-          <Skills />
+        <section id="certifications" className="scroll-mt-24">
+          <CertificationsSection />
         </section>
         <section id="experience" className="scroll-mt-24">
           <Experience />
+        </section>
+        <section id="skills" className="scroll-mt-24">
+          <Skills />
         </section>
         <section id="education" className="scroll-mt-24">
           <Education />
