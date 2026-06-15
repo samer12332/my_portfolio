@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { portfolio } from '@/data/portfolio'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Samer Yousry - Software Engineer',
-  description: 'Software Engineer building scalable web applications, APIs, and full-stack systems',
+  title: portfolio.personal.metadataTitle,
+  description: portfolio.personal.metadataDescription,
   generator: 'v0.app',
   icons: {
     icon: [

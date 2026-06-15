@@ -1,0 +1,408 @@
+{
+  "personal": {
+    "name": "Samer Yousry",
+    "role": "Software Engineer",
+    "heroBadge": "Building Modern Digital Products",
+    "heroDescription": "I design and build full-stack applications, scalable backend APIs, and polished user experiences with a focus on reliability, performance, and product impact.",
+    "profileImage": "/samer-profile.png",
+    "footerDescription": "Software Engineer focused on building scalable products, clean systems, and meaningful user experiences.",
+    "copyright": "Copyright 2026 Samer Yousry. All rights reserved.",
+    "metadataTitle": "Samer Yousry - Software Engineer",
+    "metadataDescription": "Software Engineer building scalable web applications, APIs, and full-stack systems"
+  },
+  "about": {
+    "eyebrow": "About Me",
+    "heading": "Engineering with Product Mindset",
+    "description": "I'm a Software Engineer focused on building robust, user-centered products. I enjoy crafting reliable backend systems and polished frontends that work together seamlessly. My goal is always to deliver software that is scalable, maintainable, and genuinely useful.",
+    "highlights": [
+      {
+        "icon": "code-2",
+        "title": "Engineering Depth",
+        "text": "Full-stack and backend expertise with practical production-focused delivery."
+      },
+      {
+        "icon": "layers-3",
+        "title": "System Thinking",
+        "text": "Clean architecture, scalable design, and maintainable codebases."
+      },
+      {
+        "icon": "briefcase-business",
+        "title": "Real Projects",
+        "text": "Hands-on work across e-commerce, dashboards, and API-driven systems."
+      },
+      {
+        "icon": "rocket",
+        "title": "Continuous Growth",
+        "text": "Advanced upskilling through ITI Open Source Development Diploma."
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Portfolio Highlights",
+    "heading": "Featured Projects",
+    "description": "Real projects across full-stack apps, backend APIs, and frontend experiences. Each card includes live visuals from your project covers.",
+    "items": [
+      {
+        "id": "10",
+        "title": "Clinic Appointment System",
+        "description": "Full-stack, role-based healthcare platform that streamlines clinic operations from appointment booking to consultation follow-up.",
+        "category": "Full-Stack",
+        "image": "/covers/clinic_appointment_system.png",
+        "technologies": [
+          "Django",
+          "Django REST Framework",
+          "Vue 3 (Composition API)",
+          "Vite",
+          "Pinia",
+          "Tailwind CSS",
+          "MySQL",
+          "JWT Authentication",
+          "Role-Based Access Control (RBAC)",
+          "Appointment Lifecycle Management",
+          "Doctor Availability Scheduling",
+          "Consultation Records & Prescriptions",
+          "Dashboard Analytics"
+        ],
+        "github": "https://github.com/samer12332/Clinic-Appointment-system-Django"
+      },
+      {
+        "id": "1",
+        "title": "Hotel System Laravel",
+        "description": "Hotel operations system for bookings, customer records, and administration.",
+        "category": "Full-Stack",
+        "image": "/covers/hotel_system.png",
+        "technologies": [
+          "System Design",
+          "CRUD Operations",
+          "Role-Based Systems",
+          "Business Logic Implementation",
+          "Database Design",
+          "Authentication Systems",
+          "Workflow Automation",
+          "Backend Development"
+        ],
+        "github": "https://github.com/samer12332/hotel-system-laravel"
+      },
+      {
+        "id": "2",
+        "title": "Affiliate Family Store",
+        "description": "Family-focused e-commerce platform with affiliate capabilities and admin management.",
+        "category": "Full-Stack",
+        "image": "/covers/affiliate_familystore.png",
+        "technologies": [
+          "Full-Stack Development",
+          "E-commerce Systems",
+          "Affiliate Marketing Systems",
+          "REST API Design",
+          "JWT Authentication",
+          "Database Design (MongoDB)",
+          "System Architecture",
+          "Data Relationships & Modeling"
+        ],
+        "liveDemo": "https://affiliate-family-store.vercel.app/admin/login",
+        "github": "https://github.com/samer12332/Affiliate-Family-Store"
+      },
+      {
+        "id": "3",
+        "title": "Cafeteria PHP",
+        "description": "Cafeteria management system for orders, products, and daily operations.",
+        "category": "Full-Stack",
+        "image": "/covers/cafeteria.png",
+        "technologies": [
+          "Backend Development",
+          "Order Management Systems",
+          "Workflow Automation",
+          "Data Modeling",
+          "System Logic Design",
+          "CRUD Operations",
+          "Database Design"
+        ],
+        "github": "https://github.com/samer12332/cafeteria-php"
+      },
+      {
+        "id": "4",
+        "title": "Watchlist",
+        "description": "Watchlist app for tracking content with a clean UI and user-centric experience.",
+        "category": "Full-Stack",
+        "image": "/covers/watchlist.png",
+        "technologies": [
+          "Full-Stack Web Development",
+          "CRUD Operations",
+          "API Integration",
+          "State Management",
+          "Data Modeling",
+          "Filtering & Categorization",
+          "UI/UX Optimization"
+        ],
+        "liveDemo": "https://watchlist-eight-gray.vercel.app/",
+        "github": "https://github.com/samer12332/Watchlist"
+      },
+      {
+        "id": "5",
+        "title": "Quizverse",
+        "description": "Interactive quiz project with dynamic question handling and results experience.",
+        "category": "Frontend",
+        "image": "/covers/quizverse.png",
+        "technologies": [
+          "Application Logic Design",
+          "Data Validation",
+          "Scoring Systems",
+          "Problem Solving",
+          "Team Collaboration",
+          "UI/UX Optimization"
+        ],
+        "github": "https://github.com/samer12332/ITI-JS-Project",
+        "liveDemo": "https://effulgent-tulumba-57a4fe.netlify.app/"
+      },
+      {
+        "id": "6",
+        "title": "Bookstore Django",
+        "description": "Bookstore backend and web system built with Django for managing products and store flows.",
+        "category": "Full-Stack",
+        "image": "/covers/bookstore.png",
+        "technologies": [
+          "Django Development",
+          "CRUD Operations",
+          "Authentication Systems",
+          "Relational Data Modeling",
+          "Business Logic Implementation",
+          "System Design",
+          "Admin Workflow Management"
+        ],
+        "github": "https://github.com/samer12332/bookstore-django"
+      },
+      {
+        "id": "7",
+        "title": "Task Grading Hub",
+        "description": "Task and grading workflow platform for managing submissions and performance tracking.",
+        "category": "Backend",
+        "image": "/covers/task_grading_hub.png",
+        "technologies": [
+          "REST API Development",
+          "Role-Based Systems",
+          "Authentication Systems",
+          "Business Logic Implementation",
+          "Workflow Automation",
+          "Data Validation",
+          "Relational Data Modeling",
+          "Query Optimization"
+        ],
+        "github": "https://github.com/samer12332/Task-grading-hub"
+      },
+      {
+        "id": "8",
+        "title": "Blog Prisma API",
+        "description": "RESTful blog backend API with authentication, role-based access, posts, comments, tags, and analytics using Prisma.",
+        "category": "Backend",
+        "image": "/covers/blog.png",
+        "technologies": [
+          "REST API Development",
+          "Prisma ORM",
+          "PostgreSQL",
+          "Pagination & Query Optimization",
+          "Authentication Systems",
+          "Relational Data Modeling",
+          "Input Validation"
+        ],
+        "github": "https://github.com/samer12332/Blog_prisma"
+      },
+      {
+        "id": "9",
+        "title": "Egyptian League API",
+        "description": "A REST API for managing Egyptian league teams and players with JWT-based authentication and Prisma/PostgreSQL persistence.",
+        "category": "Backend",
+        "image": "/covers/egyptian_league.png",
+        "technologies": [
+          "REST API Development",
+          "Prisma ORM",
+          "PostgreSQL",
+          "JWT Authentication",
+          "Relational Data Modeling",
+          "Input Validation",
+          "CRUD Operations",
+          "Query Optimization"
+        ],
+        "github": "https://github.com/samer12332/Egyptian-league"
+      }
+    ]
+  },
+  "certifications": {
+    "eyebrow": "Credentials",
+    "heading": "Certifications",
+    "description": "Industry-recognized certifications that validate practical cloud and security knowledge.",
+    "items": [
+      {
+        "title": "AWS Certified Cloud Practitioner",
+        "issuer": {
+          "name": "Amazon Web Services",
+          "websiteUrl": "https://aws.amazon.com?utm_source=chatgpt.com"
+        },
+        "date": "May 2026",
+        "credentialUrl": "https://www.credly.com/badges/5a3bec78-7560-4a03-96ba-f4b676344c6f/public_url",
+        "badgeImage": "/certifications/aws-cloud-practitioner.png",
+        "description": "Passed the AWS Certified Cloud Practitioner (CLF-C02) exam with a score of 881/1000, demonstrating foundational knowledge of AWS Cloud services, security, architecture, pricing, and support. AWS issues digital badges through Credly."
+      },
+      {
+        "title": "Information Security",
+        "issuer": {
+          "name": "Saylor Academy",
+          "websiteUrl": "https://www.saylor.org?utm_source=chatgpt.com"
+        },
+        "date": "April 2026",
+        "credentialUrl": "https://learn.saylor.org/admin/tool/certificate/index.php?code=0179264002SY",
+        "badgeImage": "/certifications/information-security.jpg",
+        "description": "Completed a 46-hour Information Security course with a final score of 93.88%, covering core cybersecurity concepts, security principles, threats, cryptography, access control, and risk management. Saylor provides course completion certificates for completed coursework."
+      }
+    ]
+  },
+  "experience": {
+    "eyebrow": "Professional Journey",
+    "heading": "Experience",
+    "items": [
+      {
+        "role": "Part-Time Programming Instructor",
+        "period": "Present",
+        "points": [
+          "Teaching programming fundamentals to students aged 8-18.",
+          "Helping students build real projects across multiple technologies.",
+          "Fostering problem-solving mindset and software engineering practices."
+        ],
+        "icon": "briefcase-business"
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Core Expertise",
+    "heading": "Skills & Technologies",
+    "description": "A practical toolkit across product engineering, backend architecture, and frontend implementation.",
+    "categories": [
+      {
+        "title": "Programming Languages",
+        "skills": ["JavaScript", "TypeScript", "Python", "C", "C++", "Java", "PHP"]
+      },
+      {
+        "title": "Frontend & UI",
+        "skills": ["React.js", "Next.js", "Tailwind CSS", "Vue.js", "HTML", "CSS"]
+      },
+      {
+        "title": "Backend & APIs",
+        "skills": ["Node.js", "Express.js", "Django", "Laravel", "REST APIs", "GraphQL"]
+      },
+      {
+        "title": "Data & Infrastructure",
+        "skills": ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Docker", "Prisma"]
+      },
+      {
+        "title": "Engineering Practices",
+        "skills": ["System Design", "Clean Architecture", "Authentication", "RBAC", "Testing", "Git/GitHub"]
+      },
+      {
+        "title": "Collaboration",
+        "skills": ["Agile Workflow", "Problem Solving", "Technical Mentoring", "Documentation"]
+      }
+    ]
+  },
+  "education": {
+    "eyebrow": "Education",
+    "heading": "Academic Background",
+    "items": [
+      {
+        "title": "B.Sc. in Computers and Control Systems Engineering",
+        "period": "Mansoura University | 2020 - 2025",
+        "points": [
+          "Grade: Excellent (93.42%).",
+          "Class ranking: 9th.",
+          "Strong foundation in software engineering, systems design, and computer science fundamentals."
+        ],
+        "icon": "graduation-cap"
+      },
+      {
+        "title": "ITI Open Source Development Diploma",
+        "period": "Started October 2025 (9 Months)",
+        "points": [
+          "Intensive practical training in full-stack and open-source technologies.",
+          "Project-driven collaborative development with modern engineering practices.",
+          "Deep focus on scalable architectures and software quality."
+        ],
+        "icon": "award"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Get In Touch",
+    "heading": "Let's Build Something Great",
+    "description": "Open to full-time opportunities, freelance projects, and technical collaborations.",
+    "detailsHeading": "Contact Details",
+    "formHeading": "Send a Message",
+    "formPlaceholders": {
+      "name": "Your name",
+      "email": "Your email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "formButtonLabel": "Send Message",
+    "links": [
+      {
+        "icon": "mail",
+        "label": "Email",
+        "value": "sameryousry99@gmail.com",
+        "href": "mailto:sameryousry99@gmail.com"
+      },
+      {
+        "icon": "phone",
+        "label": "WhatsApp",
+        "value": "+20 101 730 6593",
+        "href": "https://wa.me/201017306593"
+      },
+      {
+        "icon": "github",
+        "label": "GitHub",
+        "value": "github.com/samer12332",
+        "href": "https://github.com/samer12332"
+      },
+      {
+        "icon": "linkedin",
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/samer-yousry-88921a228",
+        "href": "https://www.linkedin.com/in/samer-yousry-88921a228/"
+      }
+    ]
+  },
+  "socialLinks": [
+    {
+      "icon": "github",
+      "label": "GitHub",
+      "href": "https://github.com/samer12332"
+    },
+    {
+      "icon": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/samer-yousry-88921a228/"
+    },
+    {
+      "icon": "mail",
+      "label": "Email",
+      "href": "mailto:sameryousry99@gmail.com"
+    }
+  ],
+  "footer": {
+    "quickLinks": [
+      {
+        "id": "projects",
+        "label": "Projects"
+      },
+      {
+        "id": "skills",
+        "label": "Skills"
+      },
+      {
+        "id": "experience",
+        "label": "Experience"
+      },
+      {
+        "id": "contact",
+        "label": "Contact"
+      }
+    ]
+  }
+}

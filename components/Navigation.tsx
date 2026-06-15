@@ -3,7 +3,9 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Github, Linkedin, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { portfolio } from '@/data/portfolio';
+import { contactIcons } from '@/lib/portfolio-icons';
 
 interface NavigationProps {
   activeSection: string;
@@ -22,6 +24,7 @@ const navItems = [
 ];
 
 export default function Navigation({ activeSection, onNavigate }: NavigationProps) {
+  const { personal, socialLinks } = portfolio;
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -55,7 +58,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
         >
           <Image
             src="/samer-logo.png"
-            alt="Samer Yousry logo"
+            alt={`${personal.name} logo`}
             width={280}
             height={158}
             className="h-10 sm:h-11 w-auto origin-left scale-[2.2] sm:scale-[2.5] drop-shadow-[0_14px_36px_rgba(34,211,238,0.55)]"
@@ -88,22 +91,22 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <a
-            href="https://github.com/samer12332"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex p-2 rounded-full border border-white/10 text-slate-300 hover:text-cyan-300 hover:border-cyan-300/60 transition-all"
-          >
-            <Github size={18} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/samer-yousry-88921a228/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex p-2 rounded-full border border-white/10 text-slate-300 hover:text-cyan-300 hover:border-cyan-300/60 transition-all"
-          >
-            <Linkedin size={18} />
-          </a>
+          {socialLinks.slice(0, 2).map((link) => {
+            const Icon = contactIcons[link.icon];
+
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                aria-label={link.label}
+                className="hidden sm:inline-flex p-2 rounded-full border border-white/10 text-slate-300 hover:text-cyan-300 hover:border-cyan-300/60 transition-all"
+              >
+                <Icon size={18} />
+              </a>
+            );
+          })}
 
           <button
             onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -139,22 +142,22 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
                 </button>
               ))}
               <div className="flex gap-2 pt-2">
-                <a
-                  href="https://github.com/samer12332"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/10 text-slate-300"
-                >
-                  <Github size={18} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/samer-yousry-88921a228/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/10 text-slate-300"
-                >
-                  <Linkedin size={18} />
-                </a>
+                {socialLinks.slice(0, 2).map((link) => {
+                  const Icon = contactIcons[link.icon];
+
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target={link.href.startsWith('http') ? '_blank' : undefined}
+                      rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      aria-label={link.label}
+                      className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/10 text-slate-300"
+                    >
+                      <Icon size={18} />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </motion.div>

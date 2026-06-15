@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { portfolio } from '@/data/portfolio';
 
 interface HeroProps {
   onProjectsClick: () => void;
@@ -10,6 +11,8 @@ interface HeroProps {
 }
 
 export default function Hero({ onProjectsClick, onContactClick }: HeroProps) {
+  const { personal } = portfolio;
+
   return (
     <section className="relative min-h-screen flex items-center px-6 py-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -39,7 +42,7 @@ export default function Hero({ onProjectsClick, onContactClick }: HeroProps) {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-300/40 text-cyan-200 bg-cyan-400/10 text-sm mb-6"
           >
             <Sparkles size={14} />
-            Building Modern Digital Products
+            {personal.heroBadge}
           </motion.p>
 
           <motion.h1
@@ -48,9 +51,9 @@ export default function Hero({ onProjectsClick, onContactClick }: HeroProps) {
             transition={{ duration: 0.65, delay: 0.1 }}
             className="text-5xl md:text-6xl xl:text-7xl font-black leading-tight text-white"
           >
-            Samer Yousry
+            {personal.name}
             <span className="block bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-400 bg-clip-text text-transparent">
-              Software Engineer
+              {personal.role}
             </span>
           </motion.h1>
 
@@ -60,7 +63,7 @@ export default function Hero({ onProjectsClick, onContactClick }: HeroProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-lg md:text-xl text-slate-300 max-w-xl mx-auto lg:mx-0"
           >
-            I design and build full-stack applications, scalable backend APIs, and polished user experiences with a focus on reliability, performance, and product impact.
+            {personal.heroDescription}
           </motion.p>
 
           <motion.div
@@ -94,8 +97,8 @@ export default function Hero({ onProjectsClick, onContactClick }: HeroProps) {
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-cyan-300/30 via-blue-500/20 to-sky-300/20 blur-2xl" />
           <div className="relative rounded-[2rem] border border-cyan-300/35 bg-slate-900/60 p-3 backdrop-blur-sm shadow-[0_25px_70px_-35px_rgba(34,197,255,0.9)]">
             <Image
-              src="/samer-profile.png"
-              alt="Samer Yousry"
+              src={personal.profileImage}
+              alt={personal.name}
               width={520}
               height={520}
               className="rounded-[1.5rem] object-cover w-[320px] h-[320px] sm:w-[420px] sm:h-[420px]"
